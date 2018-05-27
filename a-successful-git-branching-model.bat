@@ -8,6 +8,7 @@ if "%1"=="squash" set MERGE_TYPE=squash
 if "%MERGE_TYPE%"=="" goto END
 
 set REPO=a-successful-git-branching-model-%1
+IF %errorlevel% GTR 0 goto END
 echo %REPO%
 if exist %REPO% goto END
 
